@@ -11,4 +11,9 @@ public class Gem extends Stone {
     public void calculatePrice() {
         this.price = this.weight * 1725;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nimpurityPercentages " + impurityPercentages;
+    }
 }
