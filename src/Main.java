@@ -28,7 +28,7 @@ public class Main {
         collar.calculatePrice();
         System.out.println(collar);
         collar.findStones(70,60);
-
+        collar.sortPrice();
         System.out.println(collar);
 
 

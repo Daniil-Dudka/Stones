@@ -1,6 +1,7 @@
 package stones;
 
 import util.ComparePrice;
+import util.CompareWeight;
 
 import java.util.*;
 
@@ -39,6 +40,10 @@ public class Necklace {
     public void sortPrice(){
         Comparator priceComparator = new ComparePrice();
         Collections.sort(rocks,priceComparator);
+    }
+    public void sortWeight(){
+        Comparator weightComparator = new CompareWeight();
+        Collections.sort(rocks,weightComparator);
     }
     public String toString(){
        return "Color: " + color +
