@@ -13,4 +13,9 @@ public class Semiprecious extends Stone {
     public void calculatePrice(){
         this.price = this.weight * 600;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nnaturalness " + naturalness ;
+    }
 }

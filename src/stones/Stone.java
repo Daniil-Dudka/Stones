@@ -19,9 +19,13 @@ public abstract class Stone implements Valuable {
 
 
     public String toString(){
-        return "weight " + this.weight +
-                "\nprice " + this.price +
-                "\ntransparency" + this.transparency;
+        return "\nweight = " + this.weight +
+                "\nprice = " + this.price +
+                "\ntransparency = " + this.transparency ;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     public void setPrice(double price) {

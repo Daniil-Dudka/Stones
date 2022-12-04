@@ -18,6 +18,20 @@ public class Main {
         rocksBunch.add(new Gem(30,70,Green.getColor(),0.1));
         rocksBunch.add(new Gem(23,65,Black.getColor(),2));
         rocksBunch.add(new Gem(21, 90, Red.getColor(),0));
+
+        Necklace collar = new Necklace();
+        collar.setColor(Black.getColor());
+        for (Stone rock : rocksBunch) {
+            collar.addStone(rock, rock.getColor());
+        }
+        collar.calculateWeight();
+        collar.calculatePrice();
+        System.out.println(collar);
+        collar.findStones(70,60);
+
+        System.out.println(collar);
+
+
     }
 
 }

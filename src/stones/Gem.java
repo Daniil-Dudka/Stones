@@ -14,6 +14,6 @@ public class Gem extends Stone {
 
     @Override
     public String toString() {
-        return super.toString() + "\nimpurityPercentages " + impurityPercentages;
+        return super.toString() + "\nimpurityPercentages " + impurityPercentages ;
     }
 }
