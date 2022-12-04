@@ -9,13 +9,11 @@ public abstract class Stone implements Valuable {
     private String color;
     // макс число карат 756
 
-    public Stone(){
-        this.weight = Math.random() % 756;
-        this.price = Math.random() % 100000;
-        this.transparency = Math.random() % 100;
-        Colours[] clrs = Colours.values();
-        int temp_rand = (int) (Math.random() % 9);
-        color = clrs[temp_rand].getColor();
+    public Stone(double weight,double transparency, String color){
+        this.weight = weight;
+        calculatePrice();
+        this.transparency = transparency;
+        this.color = color;
 
     }
 
