@@ -1,14 +1,23 @@
 package stones;
 
-import stones.Valuable;
+import java.util.Arrays;
 
 public abstract class Stone implements Valuable {
-    double weight = 0;
-    double price = 0;
-    double transparency = 0;
+    protected double weight = 0;
+    protected double price = 0;
+    private double transparency = 0;
+    private String color;
     // макс число карат 756
 
+    public Stone(){
+        this.weight = Math.random() % 756;
+        this.price = Math.random() % 100000;
+        this.transparency = Math.random() % 100;
+        Colours[] clrs = Colours.values();
+        int temp_rand = (int) (Math.random() % 9);
+        color = clrs[temp_rand].getColor();
 
+    }
 
 
     public String toString(){
@@ -18,7 +27,8 @@ public abstract class Stone implements Valuable {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if (price > 0)
+            this.price = price;
     }
 
     public double getPrice() {
@@ -26,7 +36,8 @@ public abstract class Stone implements Valuable {
     }
 
     public void setWeight(double weight) {
-        this.weight = weight;
+        if (weight>0 && weight <= 756)
+            this.weight = weight;
     }
 
     public double getWeight() {
@@ -34,10 +45,13 @@ public abstract class Stone implements Valuable {
     }
 
     public void setTransparency(double transparency) {
-        this.transparency = transparency;
+        if(transparency>=0 && transparency<=100)
+            this.transparency = transparency;
     }
 
     public double getTransparency() {
         return transparency;
     }
+
+
 }
